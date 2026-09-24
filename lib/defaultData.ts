@@ -1,16 +1,11 @@
-import {
-  CoupleProfile,
-  CommitMilestone,
-  PhotoMemory,
-  UnitTestItem,
-} from "./types";
+import { CoupleProfile, CommitMilestone, PhotoMemory, UnitTestItem } from "./types";
 
 export const DEFAULT_COUPLE_PROFILE: CoupleProfile = {
   partner1: "Tola",
   partner2: "Lina",
-  partner1Role: "Sneha coder & 24/7 Support",
+  partner1Role: "Senior Heart Developer & 24/7 Support",
   partner2Role: "Chief Happiness Officer & Sunshine Architect",
-  startDate: "2025-10-12T00:00:00",
+  startDate: "2024-09-24T00:00:00",
   subtitle: "Two developers, one repository, zero merge conflicts.",
   loveLetterTitle: "To My Favorite Human in the Entire Universe 💌",
   loveLetterBody: `Dearest Lina,
@@ -25,8 +20,7 @@ Happy Anniversary, my darling Lina. Here is to a lifetime of releases, zero down
 
 Forever Yours,
 Tola ❤️`,
-  weddingOrPromise:
-    "We promise to love, cherish, debug each other's bad days, share the last slice of pizza, and build our dreams together forever.",
+  weddingOrPromise: "We promise to love, cherish, debug each other's bad days, share the last slice of pizza, and build our dreams together forever.",
 };
 
 export const DEFAULT_COMMITS: CommitMilestone[] = [
@@ -38,8 +32,8 @@ export const DEFAULT_COMMITS: CommitMilestone[] = [
     author: "Tola & Lina",
     tag: "feat",
     message: "feat(core): git init our love repository ❤️",
-    description:
-      "The spark that started it all. Our first hello turned into endless hours of conversation, laughter, and realizing we found someone truly irreplaceable.",
+    description: "The spark that started it all. Our first hello turned into endless hours of conversation, laughter, and realizing we found someone truly irreplaceable.",
+    photoUrl: "/images/tola_lina_1.jpg",
     diffCode: `+ const couple = new LoveConnection({
 +   partnerA: "Tola",
 +   partnerB: "Lina",
@@ -55,8 +49,8 @@ export const DEFAULT_COMMITS: CommitMilestone[] = [
     author: "Tola",
     tag: "feat",
     message: "feat(first_date): unhandled heartbeat exception",
-    description:
-      "Our magical first official date. Warm tea, shy smiles, looking into your eyes and completely forgetting everything else around us.",
+    description: "Our magical first official date. Warm tea, shy smiles, looking into your eyes and completely forgetting everything else around us.",
+    photoUrl: "/images/tola_lina_2.jpg",
     diffCode: `  function onFirstLookAt(lina) {
 -   let heartRate = 72; // normal
 +   let heartRate = 180; // extreme butterflies
@@ -71,8 +65,8 @@ export const DEFAULT_COMMITS: CommitMilestone[] = [
     author: "Lina",
     tag: "fix",
     message: "fix(arguments): resolved immediately with warm hugs & boba 🧋",
-    description:
-      "Learning how to navigate our differences with patience, listening, gentle hugs, and favorite snacks. Every conversation made us closer.",
+    description: "Learning how to navigate our differences with patience, listening, gentle hugs, and favorite snacks. Every conversation made us closer.",
+    photoUrl: "/images/tola_lina_4.jpg",
     diffCode: `+ async function resolveBadDay(mood) {
 +   await deliverWarmHug();
 +   await orderFavoriteFood();
@@ -86,11 +80,11 @@ export const DEFAULT_COMMITS: CommitMilestone[] = [
     branch: "adventure",
     author: "Tola & Lina",
     tag: "feat",
-    message: "feat(travel): our unforgettable getaway under the stars ✨",
-    description:
-      "Exploring new horizons together. Holding hands under starry skies, taking silly selfies, and realizing home isn't a place — it's being with you.",
+    message: "feat(travel): our unforgettable getaway under the festival lights ✨",
+    description: "Celebrating together under the glowing festival lights. Hand in hand through the crowd, making wishes and laughing together.",
+    photoUrl: "/images/tola_lina_3.jpg",
     diffCode: `+ const memory = {
-+   location: "Under starry skies",
++   location: "Festival lights & stars",
 +   holdingHands: true,
 +   vibe: "Pure enchantment",
 +   savedToHeartForever: true
@@ -104,8 +98,8 @@ export const DEFAULT_COMMITS: CommitMilestone[] = [
     author: "Tola",
     tag: "refactor",
     message: "refactor(priority): Lina locked as permanent TOP_PRIORITY",
-    description:
-      "Promising to always put your happiness, your dreams, and your peace of mind first. Through every storm and every sunshine.",
+    description: "Promising to always put your happiness, your dreams, and your peace of mind first. Through every storm and every sunshine.",
+    photoUrl: "/images/tola_lina_4.jpg",
     diffCode: `  const priorities = {
 -   work: 1,
 -   hobbies: 2,
@@ -121,8 +115,8 @@ export const DEFAULT_COMMITS: CommitMilestone[] = [
     author: "Tola & Lina",
     tag: "release",
     message: "release(v2.0): Happy Anniversary! 100% Love Coverage 🚀",
-    description:
-      "Celebrating another breathtaking milestone! 2 full years of laughter, growth, mutual respect, and unconditional love. Here's to forever!",
+    description: "Celebrating another breathtaking milestone! 2 full years of laughter, growth, mutual respect, and unconditional love. Here's to forever!",
+    photoUrl: "/images/tola_lina_5.jpg",
     diffCode: `+ export const FOREVER_AND_ALWAYS = {
 +   version: "2.0.0-anniversary",
 +   uptime: "100%",
@@ -135,75 +129,53 @@ export const DEFAULT_COMMITS: CommitMilestone[] = [
 export const DEFAULT_PHOTOS: PhotoMemory[] = [
   {
     id: "photo-1",
-    title: "The Golden Hour Glow",
-    date: "First Autumn",
+    title: "Night Stroll & Peace Sign ✌️",
+    date: "Autumn Night Walk",
     category: "dates",
-    description:
-      "You looked so breathtaking against the sunset light, I couldn't take my eyes off you.",
-    tags: ["#Sunset", "#FirstDate", "#CutestSmile"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=900&auto=format&fit=crop",
-    likes: 42,
+    description: "Cool evening breeze, walking together with your cute cap, flashing that sweet smile and peace sign.",
+    tags: ["#NightWalk", "#CuteCap", "#SweetSmile"],
+    imageUrl: "/images/tola_lina_1.jpg",
+    likes: 142,
   },
   {
     id: "photo-2",
-    title: "Cozy Coffee & Coding Late",
-    date: "Winter Evenings",
+    title: "Panda Smile & Peeking Hugs 🐼",
+    date: "Cozy Fun Moments",
     category: "milestones",
-    description:
-      "Two laptops, one cozy café corner, sharing headphones and warm lattes.",
-    tags: ["#CoderCouple", "#CoffeeVibes", "#CozyNight"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=900&auto=format&fit=crop",
-    likes: 88,
+    description: "The absolute cutest moment! Hiding playfully under my arm with your adorable panda sticker and radiant smile.",
+    tags: ["#PandaSticker", "#PureJoy", "#CutestLina"],
+    imageUrl: "/images/tola_lina_2.jpg",
+    likes: 198,
   },
   {
     id: "photo-3",
-    title: "Stargazing Adventure",
-    date: "Summer Road Trip",
+    title: "Khmer new year✨",
+    date: "Festival Celebration",
     category: "trips",
-    description:
-      "Wrapped in a warm blanket, watching shooting stars and making wishes about our future.",
-    tags: ["#RoadTrip", "#Stargazing", "#MagicMoments"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=900&auto=format&fit=crop",
-    likes: 120,
+    description: "Covered in celebratory powder, laughing amidst the glowing lights and music. Unforgettable festival vibes together.",
+    tags: ["#FestivalNight", "#MagicLights", "#TogetherForever"],
+    imageUrl: "/images/tola_lina_3.jpg",
+    likes: 220,
   },
   {
     id: "photo-4",
-    title: "Rainy Afternoon Laughs",
-    date: "Spring Memories",
-    category: "dates",
-    description:
-      "Caught in the rain without an umbrella, laughing uncontrollably all the way home.",
-    tags: ["#RainyDay", "#PureJoy", "#SillyUs"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1518199266791-5375a83190b7?q=80&w=900&auto=format&fit=crop",
-    likes: 95,
+    title: "Green Garden Adventure 🌿",
+    date: "Outdoor Nature Day",
+    category: "trips",
+    description: "Backpacks ready, surrounded by lush green trees, taking silly selfies and enjoying every single step with you.",
+    tags: ["#NatureWalk", "#AdventureDuo", "#SweetPose"],
+    imageUrl: "/images/tola_lina_4.jpg",
+    likes: 175,
   },
   {
     id: "photo-5",
-    title: "Beachside Hand-in-Hand",
-    date: "Summer Getaway",
-    category: "trips",
-    description:
-      "Walking along the shore at dusk with the waves gently washing over our feet.",
-    tags: ["#BeachWalk", "#Peaceful", "#LoveOfMyLife"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=900&auto=format&fit=crop",
-    likes: 156,
-  },
-  {
-    id: "photo-6",
-    title: "Our Celebratory Toast",
-    date: "Anniversary Eve",
-    category: "milestones",
-    description:
-      "Cheers to our journey, to all we have overcome, and to all the magic yet to come.",
-    tags: ["#Anniversary", "#Celebration", "#TwoDevsOneHeart"],
-    imageUrl:
-      "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=900&auto=format&fit=crop",
-    likes: 210,
+    title: "Cinema Date Night 🤟",
+    date: "Movie & Mall Date",
+    category: "dates",
+    description: "Throwing up the 'I Love You' sign at the theater. The best movie date partner in the whole wide world.",
+    tags: ["#MovieNight", "#ILoveYouSign", "#BestDate"],
+    imageUrl: "/images/tola_lina_5.jpg",
+    likes: 256,
   },
 ];
 

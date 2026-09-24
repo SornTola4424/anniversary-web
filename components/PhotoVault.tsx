@@ -91,13 +91,13 @@ export default function PhotoVault({ photos: initialPhotos }: PhotoVaultProps) {
                 </div>
 
                 {/* Photo Image with Zoom on Hover */}
-                <div className="relative h-60 w-full overflow-hidden bg-black/40">
+                <div className="relative h-72 sm:h-80 w-full overflow-hidden bg-black/40">
                   <Image
                     src={photo.imageUrl}
                     alt={photo.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#090716] via-transparent to-transparent opacity-60" />
                   
@@ -172,12 +172,12 @@ export default function PhotoVault({ photos: initialPhotos }: PhotoVaultProps) {
               </button>
 
               {/* Large Image */}
-              <div className="relative h-80 sm:h-96 w-full">
+              <div className="relative h-[420px] sm:h-[520px] w-full bg-black/60">
                 <Image
                   src={activePhoto.imageUrl}
                   alt={activePhoto.title}
                   fill
-                  className="object-cover"
+                  className="object-contain"
                 />
               </div>
 

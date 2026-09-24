@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import {
   Heart,
   Terminal,
@@ -127,6 +128,45 @@ export const relationship = {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/30 text-pink-300 text-xs font-mono">
             <Sparkles className="w-3.5 h-3.5 text-pink-400" />
             <span>ANNIVERSARY RELEASE: V2.0.0</span>
+          </div>
+        </div>
+
+        {/* Couple Hero Photo Badge */}
+        <div className="flex items-center justify-center mb-8">
+          <div className="relative group cursor-pointer" onClick={handleRunCode}>
+            <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 blur-md opacity-70 group-hover:opacity-100 transition duration-500"></div>
+            <div className="relative flex items-center gap-3 bg-[#0e0a24]/90 border border-white/20 rounded-full pl-2 pr-5 py-2 shadow-2xl backdrop-blur-xl">
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-purple-400 shadow-md">
+                <Image
+                  src="/images/tola_lina_4.jpg"
+                  alt={profile.partner1}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="relative flex items-center justify-center -mx-1">
+                <Heart className="w-5 h-5 text-pink-400 fill-pink-500 animate-pulse" />
+              </div>
+              <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-pink-400 shadow-md">
+                <Image
+                  src="/images/tola_lina_2.jpg"
+                  alt={profile.partner2}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="text-left font-mono">
+                <div className="text-xs font-bold text-white flex items-center gap-1.5">
+                  <span>{profile.partner1}</span>
+                  <span className="text-pink-400">&amp;</span>
+                  <span>{profile.partner2}</span>
+                </div>
+                <div className="text-[10px] text-emerald-400 flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                  <span>99.999% Love Uptime</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 

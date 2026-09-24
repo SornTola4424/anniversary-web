@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { GitCommit, GitBranch, Code, Calendar, User, Heart, ChevronDown, ChevronUp, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { GitCommit, GitBranch, Code, Calendar, User, Heart, ChevronDown, ChevronUp, Sparkles, Camera } from "lucide-react";
 import confetti from "canvas-confetti";
 import { soundManager } from "@/lib/soundEffects";
 import { CommitMilestone } from "@/lib/types";
@@ -115,6 +116,23 @@ export default function CommitTimeline({ commits }: CommitTimelineProps) {
                       <p className="text-zinc-300 text-sm leading-relaxed mb-4 font-sans">
                         {commit.description}
                       </p>
+
+                      {/* Commit Photo Attachment */}
+                      {commit.photoUrl && (
+                        <div className="relative h-52 sm:h-56 w-full rounded-xl overflow-hidden mb-4 border border-white/10 group/img shadow-lg">
+                          <Image
+                            src={commit.photoUrl}
+                            alt={commit.message}
+                            fill
+                            className="object-cover object-center group-hover/img:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-80" />
+                          <div className="absolute bottom-2.5 left-2.5 px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[10px] font-mono text-zinc-200 flex items-center gap-1.5 border border-white/15">
+                            <Camera className="w-3 h-3 text-pink-400" />
+                            <span>Commit Snapshot</span>
+                          </div>
+                        </div>
+                      )}
 
                       {/* Author + Branch meta */}
                       <div className="flex flex-wrap items-center justify-between pt-3 border-t border-white/5 gap-2 text-xs font-mono text-zinc-400">

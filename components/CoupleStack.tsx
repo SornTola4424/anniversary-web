@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import {
   Cpu,
   Server,
@@ -53,8 +54,13 @@ export default function CoupleStack({ profile }: CoupleStackProps) {
                   {profile.partner1Role}
                 </p>
               </div>
-              <div className="w-12 h-12 rounded-2xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-purple-300">
-                <Zap className="w-6 h-6" />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden border-2 border-purple-500/40 relative shadow-lg shadow-purple-500/20 shrink-0">
+                <Image
+                  src="/images/tola_lina_4.jpg"
+                  alt={profile.partner1}
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
             </div>
 
@@ -145,8 +151,13 @@ export default function CoupleStack({ profile }: CoupleStackProps) {
                   {profile.partner2Role}
                 </p>
               </div>
-              <div className="w-12 h-12 rounded-2xl bg-pink-500/15 border border-pink-500/30 flex items-center justify-center text-pink-300">
-                <Heart className="w-6 h-6 fill-pink-500/40" />
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden border-2 border-pink-500/40 relative shadow-lg shadow-pink-500/20 shrink-0">
+                <Image
+                  src="/images/tola_lina_2.jpg"
+                  alt={profile.partner2}
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
             </div>
 
