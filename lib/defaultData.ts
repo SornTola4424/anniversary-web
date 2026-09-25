@@ -5,7 +5,7 @@ export const DEFAULT_COUPLE_PROFILE: CoupleProfile = {
   partner2: "Lina",
   partner1Role: "Senior Heart Developer & 24/7 Support",
   partner2Role: "Chief Happiness Officer & Sunshine Architect",
-  startDate: "2024-09-24T00:00:00",
+  startDate: "2025-10-12T00:00:00",
   subtitle: "Two developers, one repository, zero merge conflicts.",
   loveLetterTitle: "To My Favorite Human in the Entire Universe 💌",
   loveLetterBody: `Dearest Lina,
@@ -171,26 +171,16 @@ export const DEFAULT_PHOTOS: PhotoMemory[] = [
   },
   {
     id: "photo-5",
-    title: "Beachside Hand-in-Hand",
+    title: "Watch Movie Together",
     date: "Summer Getaway",
     category: "trips",
     description:
-      "Walking along the shore at dusk with the waves gently washing over our feet.",
+      "Our little movie dates are never just about the movie. They’re about sitting close, sharing snacks,laughing together, and turning an ordinary night into another beautiful memory. 🎬💗",
     tags: ["#BeachWalk", "#Peaceful", "#LoveOfMyLife"],
     imageUrl:"/images/tola_lina_5.jpg",
     likes: 156,
   },
-  {
-    id: "photo-6",
-    title: "Our Celebratory Toast",
-    date: "Anniversary Eve",
-    category: "milestones",
-    description:
-      "Cheers to our journey, to all we have overcome, and to all the magic yet to come.",
-    tags: ["#Anniversary", "#Celebration", "#TwoDevsOneHeart"],
-    imageUrl:"/images/tola_lina_6.jpg",
-    likes: 210,
-  },
+  
 ];
 
 export const DEFAULT_UNIT_TESTS: UnitTestItem[] = [

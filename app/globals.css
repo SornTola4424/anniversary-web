@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
+
 :root {
-  --background: hwb(248 3% 91%);
-  --foreground: #f3f4f6;
-  --primary-pink: #ff2e93;
-  --secondary-purple: #8b5cf6;
-  --accent-cyan: #38bdf8;
-  --accent-gold: #fbbf24;
+  --background: #fff5f8;
+  --foreground: #4a2535;
+  --primary-pink: #ff6b9d;
+  --secondary-purple: #e879a5;
+  --accent-cyan: #f9a8c4;
+  --accent-gold: #d4a574;
 }
 
 @theme inline {

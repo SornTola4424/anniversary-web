@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+
 import {
   Heart,
   Terminal,
@@ -138,7 +139,7 @@ export const relationship = {
             <div className="relative flex items-center gap-3 bg-[#0e0a24]/90 border border-white/20 rounded-full pl-2 pr-5 py-2 shadow-2xl backdrop-blur-xl">
               <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-purple-400 shadow-md">
                 <Image
-                  src="/images/tola_lina_4.jpg"
+                  src="/images/tola_01.jpg"
                   alt={profile.partner1}
                   fill
                   className="object-cover object-top"
@@ -149,7 +150,7 @@ export const relationship = {
               </div>
               <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-pink-400 shadow-md">
                 <Image
-                  src="/images/tola_lina_2.jpg"
+                  src="/images/lina_01.jpg"
                   alt={profile.partner2}
                   fill
                   className="object-cover object-top"
