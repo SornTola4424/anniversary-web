@@ -5,7 +5,7 @@ import LoveBackground from "@/components/LoveBackground";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CommitTimeline from "@/components/CommitTimeline";
-import LoveTerminal from "@/components/LoveTerminal";
+import LoveTerminal from "@/components/LoveTerminalClient";
 import CoupleStack from "@/components/CoupleStack";
 import PhotoVault from "@/components/PhotoVault";
 import RelationshipUnitTests from "@/components/RelationshipUnitTests";
