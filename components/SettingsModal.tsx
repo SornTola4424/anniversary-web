@@ -33,8 +33,8 @@ interface SettingsModalProps {
 }
 
 // Static login credentials
-const STATIC_USERNAMES = ["tola", "admin", "tola&lina", "lina"];
-const STATIC_PASSWORDS = ["lina", "tola", "2409", "love", "1234", "love123"];
+const STATIC_USERNAMES = ["tola", "tola1212", "admin", "tola&lina", "lina"];
+const STATIC_PASSWORDS = ["lina", "@@##$$", "tola", "2409", "love", "1234", "love123"];
 
 export default function SettingsModal({
   isOpen,
