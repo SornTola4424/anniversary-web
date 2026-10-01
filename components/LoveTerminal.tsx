@@ -31,7 +31,7 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
           </p>
           <p className="text-[#7C4863]">
             Type <span className="text-[#BA68C8] font-bold">help</span> or click any quick
-            command chip below to explore without scrolling the page.
+            command chip below to explore without page scrolling.
           </p>
         </div>
       ),
@@ -40,7 +40,8 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
 
   const terminalBodyRef = useRef<HTMLDivElement | null>(null);
 
-  // Keep internal terminal container scrolled to bottom WITHOUT ever scrolling the page window!
+  // Scroll ONLY the terminal box interior so the newest output is visible,
+  // NEVER scroll the browser window/page!
   useEffect(() => {
     if (terminalBodyRef.current) {
       terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight;
