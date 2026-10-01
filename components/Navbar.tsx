@@ -44,7 +44,7 @@ export default function Navbar({ profile, onOpenSettings }: NavbarProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-[#FFF0F7]/95 backdrop-blur-md border-b border-[#FFB8DC] shadow-sm shadow-pink-200/40 py-2.5"
+          ? "bg-[#0e0409]/95 backdrop-blur-md border-b border-[#0e0409] shadow-sm shadow-pink-200/40 py-1.5"
           : "bg-transparent py-4"
       }`}
     >
@@ -59,9 +59,9 @@ export default function Navbar({ profile, onOpenSettings }: NavbarProps) {
           </div>
           <div>
             <div className="flex items-center gap-2 text-sm font-bold tracking-wide text-[#3B1828]">
-              <span>{profile.partner1}</span>
+              <span className="text-[#B81365]">{profile.partner1}</span>
               <span className="text-[#FF2E93] font-mono">&amp;&amp;</span>
-              <span>{profile.partner2}</span>
+              <span className="text-[#B81365]">{profile.partner2}</span>
             </div>
             <div className="flex items-center gap-1.5 text-[11px] font-mono text-[#7C4863]">
               <GitBranch className="w-3 h-3 text-emerald-600" />
@@ -73,46 +73,46 @@ export default function Navbar({ profile, onOpenSettings }: NavbarProps) {
         </a>
 
         {/* Nav Links (Desktop) */}
-        <nav className="hidden lg:flex items-center gap-1 bg-white/70 border border-[#FFB8DC] rounded-full px-4 py-1.5 backdrop-blur-md shadow-sm">
+        <nav className="hidden lg:flex items-center gap-1 bg-white/40 border border-[#FFB8DC] rounded-full px-4 py-1.5 backdrop-blur-md shadow-sm">
           <a
             href="#story"
-            className="text-xs font-mono font-medium px-3 py-1 text-[#7C4863] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
+            className="text-xs font-mono font-medium px-3 py-1 text-[#f9349a] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
           >
             01. story
           </a>
           <a
             href="#timeline"
-            className="text-xs font-mono font-medium px-3 py-1 text-[#7C4863] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
+            className="text-xs font-mono font-medium px-3 py-1 text-[#f9349a] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
           >
             02. git-commits
           </a>
           <a
             href="#terminal"
-            className="text-xs font-mono font-medium px-3 py-1 text-[#7C4863] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
+            className="text-xs font-mono font-medium px-3 py-1 text-[#f9349a] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
           >
             03. love-cli
           </a>
           <a
             href="#specs"
-            className="text-xs font-mono font-medium px-3 py-1 text-[#7C4863] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
+            className="text-xs font-mono font-medium px-3 py-1 text-[#f9349a] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
           >
             04. architecture
           </a>
           <a
             href="#vault"
-            className="text-xs font-mono font-medium px-3 py-1 text-[#7C4863] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
+            className="text-xs font-mono font-medium px-3 py-1 text-[#f9349a] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
           >
             05. gallery
           </a>
           <a
             href="#tests"
-            className="text-xs font-mono font-medium px-3 py-1 text-[#7C4863] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
+            className="text-xs font-mono font-medium px-3 py-1 text-[#f9349a] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
           >
             06. test-suite
           </a>
           <a
             href="#contract"
-            className="text-xs font-mono font-medium px-3 py-1 text-[#7C4863] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
+            className="text-xs font-mono font-medium px-3 py-1 text-[#f9349a] hover:text-[#B81365] hover:bg-[#FFDBF1] rounded-full transition-colors"
           >
             07. contract
           </a>

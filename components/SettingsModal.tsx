@@ -33,8 +33,8 @@ interface SettingsModalProps {
 }
 
 // Static login credentials
-const STATIC_USERNAMES = ["tola", "admin", "tola&lina", "lina"];
-const STATIC_PASSWORDS = ["lina", "tola", "2409", "love", "1234", "love123"];
+const STATIC_USERNAMES = ["tola", "tola1212", "admin", "tola&lina", "lina"];
+const STATIC_PASSWORDS = ["lina", "@@##$$", "tola", "2409", "love", "1234", "love123"];
 
 export default function SettingsModal({
   isOpen,
@@ -105,8 +105,8 @@ export default function SettingsModal({
   // Quick Auto-fill for seamless testing
   const handleAutoFill = () => {
     soundManager.playKeyClick();
-    setUsernameInput("tola");
-    setPasswordInput("lina");
+    setUsernameInput("tola1212");
+    setPasswordInput("@@##$$");
     setLoginError("");
   };
 
@@ -208,10 +208,10 @@ export default function SettingsModal({
               </div>
               <div className="grid grid-cols-2 gap-2 text-xs font-mono text-[#4D243B] bg-[#FFF0F7] p-2.5 rounded-xl border border-[#FFD6EA]">
                 <div>
-                  Username: <strong className="text-[#3B1828]">tola</strong>
+                  Username: <strong className="text-[#3B1828]">tola1212</strong>
                 </div>
                 <div>
-                  Password: <strong className="text-[#3B1828]">lina</strong>
+                  Password: <strong className="text-[#3B1828]">@@##$$</strong>
                 </div>
               </div>
             </div>

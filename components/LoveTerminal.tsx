@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { Terminal, Send, Sparkles, CornerDownLeft } from "lucide-react";
 import confetti from "canvas-confetti";
 import { soundManager } from "@/lib/soundEffects";
@@ -31,22 +31,12 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
           </p>
           <p className="text-[#7C4863]">
             Type <span className="text-[#BA68C8] font-bold">help</span> or click any quick
-            command chip below to explore without page scrolling.
+            command chip below to explore without any scrolling.
           </p>
         </div>
       ),
     },
   ]);
-
-  const terminalBodyRef = useRef<HTMLDivElement | null>(null);
-
-  // Scroll ONLY the terminal box interior so the newest output is visible,
-  // NEVER scroll the browser window/page!
-  useEffect(() => {
-    if (terminalBodyRef.current) {
-      terminalBodyRef.current.scrollTop = terminalBodyRef.current.scrollHeight;
-    }
-  }, [history]);
 
   const handleCommand = (cmd: string) => {
     const trimmed = cmd.trim().toLowerCase();
@@ -252,8 +242,8 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
             The Love CLI Terminal
           </h2>
           <p className="text-[#7C4863] text-sm">
-            Type commands into the terminal or click the shortcut chips below to
-            query feelings and execute cuddle protocols without jumping or page scroll.
+            Type commands into the terminal or click the shortcut chips below.
+            No screen jumping or auto-scrolling down.
           </p>
         </div>
 
@@ -291,10 +281,7 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
           </div>
 
           {/* Terminal Body */}
-          <div
-            ref={terminalBodyRef}
-            className="p-4 sm:p-6 font-mono text-xs sm:text-sm h-80 overflow-y-auto space-y-4 bg-white/70 text-[#3B1828]"
-          >
+          <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm h-80 overflow-y-auto space-y-4 bg-white/70 text-[#3B1828]">
             {history.map((item, idx) => (
               <div key={idx} className="space-y-1.5">
                 <div className="flex items-center gap-2 text-[#7C4863]">
