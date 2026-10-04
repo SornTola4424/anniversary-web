@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -19,7 +19,7 @@ interface CoupleStackProps {
 
 export default function CoupleStack({ profile }: CoupleStackProps) {
   return (
-    <section id="specs" className="py-24 relative">
+    <section id="specs" className="scroll-mt-24 py-24 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -45,7 +45,7 @@ export default function CoupleStack({ profile }: CoupleStackProps) {
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
               <div>
                 <span className="text-[11px] font-mono text-purple-400 uppercase tracking-wider">
-                  Dev 01 • Client &amp; Server
+                  Dev 01 â€¢ Client &amp; Server
                 </span>
                 <h3 className="text-2xl font-bold text-white font-mono mt-0.5">
                   {profile.partner1}
@@ -142,7 +142,7 @@ export default function CoupleStack({ profile }: CoupleStackProps) {
             <div className="flex items-center justify-between mb-6 pb-4 border-b border-white/10">
               <div>
                 <span className="text-[11px] font-mono text-pink-400 uppercase tracking-wider">
-                  Dev 02 • Core Happiness Engine
+                  Dev 02 â€¢ Core Happiness Engine
                 </span>
                 <h3 className="text-2xl font-bold text-white font-mono mt-0.5">
                   {profile.partner2}

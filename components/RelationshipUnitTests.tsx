@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import { CheckCircle2, Play, Check, ShieldCheck, Terminal, Sparkles, RefreshCw } from "lucide-react";
@@ -52,7 +52,7 @@ export default function RelationshipUnitTests() {
   const progressPercent = Math.round((passedCount / tests.length) * 100);
 
   return (
-    <section id="tests" className="py-24 relative">
+    <section id="tests" className="scroll-mt-24 py-24 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
@@ -103,7 +103,7 @@ export default function RelationshipUnitTests() {
 
           {/* Test Coverage Bar */}
           <div className="bg-[#0c081c] px-6 py-3 border-b border-white/5 flex items-center justify-between text-xs font-mono">
-            <span className="text-zinc-400">Coverage: 100% Statements • 100% Love</span>
+            <span className="text-zinc-400">Coverage: 100% Statements â€¢ 100% Love</span>
             <div className="flex items-center gap-3">
               <span className="text-emerald-400 font-bold">{progressPercent}% Passed</span>
               <div className="w-32 h-2 rounded-full bg-black/50 overflow-hidden">
@@ -170,7 +170,7 @@ export default function RelationshipUnitTests() {
                 <div>Time: <span className="text-zinc-300">0.412 s</span></div>
               </div>
               <p className="text-pink-400 pt-1 text-[11px]">
-                ✨ All unit tests passed! Relationship is production ready for eternity.
+                âœ¨ All unit tests passed! Relationship is production ready for eternity.
               </p>
             </div>
           )}

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tola & Lina ❤️ | Happy Anniversary — Two Devs, One Repository",
+  title: "Tola & Lina ❤️ | Happy Anniversary ",
   description:
     "An anniversary celebration for a sweet coder couple. 100% test coverage, 0 merge conflicts, infinite loops of happiness.",
   icons: {

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState, useEffect } from "react";import Image from "next/image";
 import { Camera, Heart, Tag, Calendar, X, Sparkles, Plus } from "lucide-react";
@@ -41,7 +41,7 @@ export default function PhotoVault({ photos: initialPhotos }: PhotoVaultProps) {
     filter === "all" ? photos : photos.filter((p) => p.category === filter);
 
   return (
-    <section id="vault" className="py-24 relative">
+    <section id="vault" className="scroll-mt-24 py-24 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">

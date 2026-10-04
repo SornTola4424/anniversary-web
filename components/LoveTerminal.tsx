@@ -1,6 +1,6 @@
-"use client";
+﻿"use client";
 
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState } from "react";
 import { Terminal, Send, Sparkles, CornerDownLeft } from "lucide-react";
 import confetti from "canvas-confetti";
 import { soundManager } from "@/lib/soundEffects";
@@ -26,7 +26,7 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
       output: (
         <div className="space-y-1 text-zinc-300">
           <p className="text-pink-400 font-semibold">
-            ✨ Welcome to the {profile.partner1} &amp; {profile.partner2} Love
+            âœ¨ Welcome to the {profile.partner1} &amp; {profile.partner2} Love
             Terminal (v2.0.0-LTS)
           </p>
           <p className="text-zinc-400">
@@ -37,12 +37,6 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
       ),
     },
   ]);
-
-  const terminalEndRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [history]);
 
   const handleCommand = (cmd: string) => {
     const trimmed = cmd.trim().toLowerCase();
@@ -104,7 +98,7 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
       output = (
         <div className="p-4 rounded-xl bg-pink-500/10 border border-pink-500/20 text-pink-200 space-y-2">
           <p className="font-bold text-pink-300">
-            💌 {profile.loveLetterTitle}
+            ðŸ’Œ {profile.loveLetterTitle}
           </p>
           <p className="whitespace-pre-line text-xs sm:text-sm leading-relaxed font-sans text-zinc-200">
             {profile.loveLetterBody}
@@ -122,10 +116,10 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
       output = (
         <div className="text-pink-400 space-y-1">
           <p className="font-bold">
-            ✨ [HUG_DAEMON]: Executing cuddle protocol...
+            âœ¨ [HUG_DAEMON]: Executing cuddle protocol...
           </p>
           <p className="text-zinc-300">
-            ❤️ Warmest, tightest hug successfully delivered from{" "}
+            â¤ï¸ Warmest, tightest hug successfully delivered from{" "}
             {profile.partner1} to {profile.partner2}!
           </p>
           <p className="text-xs text-emerald-400">
@@ -143,7 +137,7 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
       });
       output = (
         <div className="p-3 rounded-lg bg-amber-500/10 border border-amber-500/30 text-amber-200 space-y-1">
-          <p className="font-bold text-amber-300">💍 [ROOT_AUTH_SUCCESSFUL]</p>
+          <p className="font-bold text-amber-300">ðŸ’ [ROOT_AUTH_SUCCESSFUL]</p>
           <p className="text-zinc-200">
             Permission granted with highest privileges. You already possess root
             access to my entire soul, heart, and future.
@@ -197,7 +191,7 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
          *******         
            ***           
             *            
-   ${profile.partner1}  ❤️  ${profile.partner2}`}
+   ${profile.partner1}  â¤ï¸  ${profile.partner2}`}
         </pre>
       );
     } else if (trimmed === "whoami") {
@@ -220,7 +214,7 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
       );
     }
 
-    setHistory((prev) => [...prev, { command: cmd, output }]);
+    setHistory([{ command: cmd, output }]);
     setInputVal("");
   };
 
@@ -241,7 +235,7 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
   ];
 
   return (
-    <section id="terminal" className="py-20 relative">
+    <section id="terminal" className="scroll-mt-24 py-20 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-10">
@@ -291,7 +285,7 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
           </div>
 
           {/* Terminal Body */}
-          <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm h-80 overflow-y-auto space-y-4">
+          <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm h-80 overflow-y-auto overflow-anchor-none space-y-4">
             {history.map((item, idx) => (
               <div key={idx} className="space-y-1.5">
                 <div className="flex items-center gap-2 text-zinc-400">
@@ -303,7 +297,6 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
                 <div className="pl-4">{item.output}</div>
               </div>
             ))}
-            <div ref={terminalEndRef} />
           </div>
 
           {/* Terminal Input Form */}
@@ -320,7 +313,6 @@ export default function LoveTerminal({ profile }: LoveTerminalProps) {
               onChange={(e) => setInputVal(e.target.value)}
               placeholder={`Type command here (e.g. npm run hug)...`}
               className="flex-1 bg-transparent border-none text-white focus:outline-none placeholder:text-zinc-600 text-xs sm:text-sm"
-              autoFocus
             />
             <button
               type="submit"

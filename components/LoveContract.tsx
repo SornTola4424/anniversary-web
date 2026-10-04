@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import {
@@ -47,7 +47,7 @@ export default function LoveContract({ profile }: LoveContractProps) {
   };
 
   return (
-    <section id="contract" className="py-24 relative">
+    <section id="contract" className="scroll-mt-24 py-24 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
@@ -122,7 +122,7 @@ export default function LoveContract({ profile }: LoveContractProps) {
               <div className="space-y-3.5">
                 <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
                   <span className="text-pink-400 font-mono text-xs font-bold pt-0.5">
-                    § 1.0
+                    Â§ 1.0
                   </span>
                   <p className="text-zinc-200 text-xs sm:text-sm leading-relaxed">
                     <strong>Zero Downtime Comfort:</strong> In moments of stress
@@ -133,7 +133,7 @@ export default function LoveContract({ profile }: LoveContractProps) {
 
                 <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
                   <span className="text-purple-400 font-mono text-xs font-bold pt-0.5">
-                    § 2.0
+                    Â§ 2.0
                   </span>
                   <p className="text-zinc-200 text-xs sm:text-sm leading-relaxed">
                     <strong>The Dessert Invariant:</strong> The last bite of
@@ -145,7 +145,7 @@ export default function LoveContract({ profile }: LoveContractProps) {
 
                 <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
                   <span className="text-cyan-400 font-mono text-xs font-bold pt-0.5">
-                    § 3.0
+                    Â§ 3.0
                   </span>
                   <p className="text-zinc-200 text-xs sm:text-sm leading-relaxed">
                     <strong>Immutable Admiration:</strong> {profile.partner1}{" "}
@@ -157,7 +157,7 @@ export default function LoveContract({ profile }: LoveContractProps) {
 
                 <div className="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
                   <span className="text-amber-400 font-mono text-xs font-bold pt-0.5">
-                    § 4.0
+                    Â§ 4.0
                   </span>
                   <p className="text-zinc-200 text-xs sm:text-sm leading-relaxed">
                     <strong>Automatic Grace Protocol:</strong> No arguments
@@ -181,7 +181,7 @@ export default function LoveContract({ profile }: LoveContractProps) {
                   </div>
                   <div className="text-sm font-bold text-white font-mono">
                     {isSigned
-                      ? "STATUS: SEALED & RATIFIED ❤️"
+                      ? "STATUS: SEALED & RATIFIED â¤ï¸"
                       : "STATUS: PENDING RATIFICATION"}
                   </div>
                   <div className="text-xs text-zinc-400">
