@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import { Terminal, Send, Sparkles, CornerDownLeft } from "lucide-react";
@@ -26,7 +26,7 @@ export default function LoveTerminalClient({ profile }: LoveTerminalProps) {
       output: (
         <div className="space-y-1 text-[#4D243B]">
           <p className="text-[#B81365] font-bold">
-            ✨ Welcome to the {profile.partner1} &amp; {profile.partner2} Love
+            âœ¨ Welcome to the {profile.partner1} &amp; {profile.partner2} Love
             Terminal (v2.0.0-LTS)
           </p>
           <p className="text-[#7C4863]">
@@ -90,7 +90,7 @@ export default function LoveTerminalClient({ profile }: LoveTerminalProps) {
       output = (
         <div className="p-4 rounded-2xl bg-[#FFDBF1]/60 border border-[#FF8CBF]/60 text-[#3B1828] space-y-2 shadow-sm">
           <p className="font-bold text-[#B81365] flex items-center gap-1.5">
-            <span>💌</span>
+            <span>ðŸ’Œ</span>
             <span>{profile.loveLetterTitle}</span>
           </p>
           <p className="whitespace-pre-line text-xs sm:text-sm leading-relaxed font-sans text-[#4D243B]">
@@ -113,7 +113,7 @@ export default function LoveTerminalClient({ profile }: LoveTerminalProps) {
             <span>[HUG_DAEMON]: Executing cuddle protocol...</span>
           </p>
           <p className="text-[#3B1828]">
-            ❤️ Warmest, tightest hug successfully delivered from{" "}
+            â¤ï¸ Warmest, tightest hug successfully delivered from{" "}
             <strong>{profile.partner1}</strong> to <strong>{profile.partner2}</strong>!
           </p>
           <p className="text-xs text-emerald-700 font-semibold font-mono">
@@ -132,7 +132,7 @@ export default function LoveTerminalClient({ profile }: LoveTerminalProps) {
       output = (
         <div className="p-3.5 rounded-2xl bg-amber-50 border border-amber-300 text-[#3B1828] space-y-1.5 shadow-sm">
           <p className="font-bold text-amber-800 flex items-center gap-1.5">
-            <span>💍</span>
+            <span>ðŸ’</span>
             <span>[ROOT_AUTH_SUCCESSFUL]</span>
           </p>
           <p className="text-[#4D243B]">
@@ -169,7 +169,7 @@ export default function LoveTerminalClient({ profile }: LoveTerminalProps) {
             Your branch is up to date with &apos;destiny/eternal&apos;.
           </p>
           <p className="text-[#7C4863]">
-            nothing to stash, working tree completely filled with happiness 💕
+            nothing to stash, working tree completely filled with happiness ðŸ’•
           </p>
         </div>
       );
@@ -187,7 +187,7 @@ export default function LoveTerminalClient({ profile }: LoveTerminalProps) {
          *******         
            ***           
             *            
-   ${profile.partner1}  ❤️  ${profile.partner2}`}
+   ${profile.partner1}  â¤ï¸  ${profile.partner2}`}
         </pre>
       );
     } else if (trimmed === "whoami") {
@@ -210,7 +210,7 @@ export default function LoveTerminalClient({ profile }: LoveTerminalProps) {
       );
     }
 
-    setHistory((prev) => [...prev, { command: cmd, output }]);
+     setHistory([{ command: cmd, output }]);
     setInputVal("");
   };
 
@@ -231,7 +231,7 @@ export default function LoveTerminalClient({ profile }: LoveTerminalProps) {
   ];
 
   return (
-    <section id="terminal" className="py-20 relative">
+    <section id="terminal" className="scroll-mt-24 py-20 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center max-w-xl mx-auto mb-10">
@@ -282,7 +282,7 @@ export default function LoveTerminalClient({ profile }: LoveTerminalProps) {
           </div>
 
           {/* Terminal Body */}
-          <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm h-80 overflow-y-auto space-y-4 bg-white/70 text-[#3B1828]">
+          <div className="p-4 sm:p-6 font-mono text-xs sm:text-sm h-80 overflow-y-auto overflow-anchor-none space-y-4 bg-white/70 text-[#3B1828]">
             {history.map((item, idx) => (
               <div key={idx} className="space-y-1.5">
                 <div className="flex items-center gap-2 text-[#7C4863]">

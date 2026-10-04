@@ -112,7 +112,7 @@ export const relationship = {
   return (
     <section
       id="story"
-      className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden"
+      className="relative scroll-mt-24 pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         {/* Top Status Indicators */}

@@ -5,13 +5,12 @@ import LoveBackground from "@/components/LoveBackground";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CommitTimeline from "@/components/CommitTimeline";
-import LoveTerminal from "@/components/LoveTerminalClient";
+import LoveTerminal from "@/components/LoveTerminal";
 import CoupleStack from "@/components/CoupleStack";
 import PhotoVault from "@/components/PhotoVault";
 import RelationshipUnitTests from "@/components/RelationshipUnitTests";
 import LoveContract from "@/components/LoveContract";
 import LoveLetterModal from "@/components/LoveLetterModal";
-import SettingsModal from "@/components/SettingsModal";
 import Footer from "@/components/Footer";
 
 import {
@@ -26,7 +25,6 @@ const STORAGE_KEY = "coder_couple_profile_v3_tola_lina";
 export default function Home() {
   const [profile, setProfile] = useState<CoupleProfile>(DEFAULT_COUPLE_PROFILE);
   const [isLetterModalOpen, setIsLetterModalOpen] = useState(false);
-  const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false);
 
   // Load saved profile if available, ensuring Lina is updated
   useEffect(() => {
@@ -46,25 +44,13 @@ export default function Home() {
     }
   }, []);
 
-  const handleSaveProfile = (newProfile: CoupleProfile) => {
-    setProfile(newProfile);
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(newProfile));
-    } catch {
-      // ignore storage error
-    }
-  };
-
   return (
     <div className="relative min-h-screen bg-[#090716] text-[#f3f4f6] selection:bg-pink-500 selection:text-white">
       {/* Background Interactive Particles & Neon Glows */}
       <LoveBackground />
 
       {/* Navigation */}
-      <Navbar
-        profile={profile}
-        onOpenSettings={() => setIsSettingsModalOpen(true)}
-      />
+      <Navbar profile={profile} />
 
       {/* Main Content Sections */}
       <main className="relative z-10">
@@ -94,13 +80,6 @@ export default function Home() {
         isOpen={isLetterModalOpen}
         onClose={() => setIsLetterModalOpen(false)}
         profile={profile}
-      />
-
-      <SettingsModal
-        isOpen={isSettingsModalOpen}
-        onClose={() => setIsSettingsModalOpen(false)}
-        currentProfile={profile}
-        onSave={handleSaveProfile}
       />
     </div>
   );

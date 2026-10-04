@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
 import Image from "next/image";
@@ -48,7 +48,7 @@ export default function CommitTimeline({ commits }: CommitTimelineProps) {
   };
 
   return (
-    <section id="timeline" className="py-24 relative overflow-hidden">
+    <section id="timeline" className="scroll-mt-24 py-24 relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">

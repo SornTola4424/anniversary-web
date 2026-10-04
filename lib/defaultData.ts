@@ -1,25 +1,21 @@
 import { CoupleProfile, CommitMilestone, PhotoMemory, UnitTestItem } from "./types";
 
 export const DEFAULT_COUPLE_PROFILE: CoupleProfile = {
-  partner1: "Tola",
-  partner2: "Lina",
+  partner1: "Tong",
+  partner2: "Polina",
   partner1Role: "Senior Heart Developer & 24/7 Support",
   partner2Role: "Chief Happiness Officer & Sunshine Architect",
-  startDate: "2024-09-24T00:00:00",
+  startDate: "2025-10-12T00:00:00",
   subtitle: "Two developers, one repository, zero merge conflicts.",
   loveLetterTitle: "To My Favorite Human in the Entire Universe 💌",
-  loveLetterBody: `Dearest Lina,
+  loveLetterBody: `Dearest Polina,
 
-If our love was written in code, it would be an infinite loop with no break condition, running forever on the world's most stable server. 
-
-From the very first moment we started talking, every moment with you has felt like finding the missing piece of my source code. You make everyday moments magical — whether we are sharing late-night coffees, laughing over silly jokes, traveling together, or simply sitting quietly in each other's warmth.
-
-Thank you for being my anchor, my sweetest inspiration, and my greatest adventure. No matter what bugs life throws at us, I promise to always stand by you, listen to you, hold your hand, and love you more with every single git push.
-
-Happy Anniversary, my darling Lina. Here is to a lifetime of releases, zero downtime, and infinite happiness together!
-
-Forever Yours,
-Tola ❤️`,
+  Before you, my days were just routine execution. With you, life became an adventure worth compiling every single morning. Thank you for your patience,
+   your laughter, and the steady warmth you bring into my world. Through every season and every update life brings,
+  my commitment to you remains constant and unbroken. Happy Anniversary, my darling—here’s
+   to an endless journey of building our dreams together.
+  Forever Yours,
+  Tola ❤️`,
   weddingOrPromise: "We promise to love, cherish, debug each other's bad days, share the last slice of pizza, and build our dreams together forever.",
 };
 
@@ -27,7 +23,7 @@ export const DEFAULT_COMMITS: CommitMilestone[] = [
   {
     id: "commit-1",
     hash: "a1f9e20",
-    date: "Sep 24, 2024",
+    date: "Oct 24, 2025",
     branch: "main",
     author: "Tola & Lina",
     tag: "feat",
