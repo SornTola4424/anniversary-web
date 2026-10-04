@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import Image from "next/image";
+import React, { useState, useEffect } from "react";import Image from "next/image";
 import { Camera, Heart, Tag, Calendar, X, Sparkles, Plus } from "lucide-react";
 import confetti from "canvas-confetti";
 import { soundManager } from "@/lib/soundEffects";
@@ -17,6 +16,10 @@ export default function PhotoVault({ photos: initialPhotos }: PhotoVaultProps) {
   const [filter, setFilter] = useState<"all" | "dates" | "trips" | "milestones">("all");
   const [activePhoto, setActivePhoto] = useState<PhotoMemory | null>(null);
   const [likedMap, setLikedMap] = useState<Record<string, boolean>>({});
+
+  useEffect(() => {
+    setPhotos(initialPhotos);
+  }, [initialPhotos]);
 
   const handleLike = (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -96,6 +99,7 @@ export default function PhotoVault({ photos: initialPhotos }: PhotoVaultProps) {
                     src={photo.imageUrl}
                     alt={photo.title}
                     fill
+                    unoptimized
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
