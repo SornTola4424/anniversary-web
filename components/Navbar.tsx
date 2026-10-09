@@ -94,7 +94,7 @@ export default function Navbar({ profile }: NavbarProps) {
         </a>
 
         {/* Nav Links (Desktop) */}
-        <nav className="hidden lg:flex items-center gap-1 bg-white/40 border border-[#FFB8DC] rounded-full px-4 py-1.5 backdrop-blur-md shadow-sm">
+        <nav className="hidden lg:flex items-center gap-1 bg-[#14091f]/80 border border-pink-500/20 rounded-full px-4 py-1.5 backdrop-blur-xl shadow-[0_8px_30px_rgba(236,72,153,0.08)]">
           {navItems.map((item) => (
             <a
               key={item.href}

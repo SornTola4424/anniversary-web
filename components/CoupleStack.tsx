@@ -56,7 +56,7 @@ export default function CoupleStack({ profile }: CoupleStackProps) {
               </div>
               <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden border-2 border-purple-500/40 relative shadow-lg shadow-purple-500/20 shrink-0">
                 <Image
-                  src="/images/tola_02.jpg"
+                  src="/images/tolaa_03.jpg"
                   alt={profile.partner1}
                   fill
                   className="object-cover object-top"
@@ -153,7 +153,7 @@ export default function CoupleStack({ profile }: CoupleStackProps) {
               </div>
               <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl overflow-hidden border-2 border-pink-500/40 relative shadow-lg shadow-pink-500/20 shrink-0">
                 <Image
-                  src="/images/lina_02.jpg"
+                  src="/images/lina_03.jpg"
                   alt={profile.partner2}
                   fill
                   className="object-cover object-top"

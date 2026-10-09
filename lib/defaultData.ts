@@ -1,7 +1,7 @@
 import { CoupleProfile, CommitMilestone, PhotoMemory, UnitTestItem } from "./types";
 
 export const DEFAULT_COUPLE_PROFILE: CoupleProfile = {
-  partner1: "Tong",
+  partner1: "ToLa",
   partner2: "Polina",
   partner1Role: "Senior Heart Developer & 24/7 Support",
   partner2Role: "Chief Happiness Officer & Sunshine Architect",
